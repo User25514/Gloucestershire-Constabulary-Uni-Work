@@ -1,0 +1,79 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #949494;
+    padding: 10px;
+}
+
+
+/* Submit Button */
+
+.navigationmenu {
+    background-color: #efefef;
+    border: 1px solid #ccc;
+}
+
+.navigationtext {
+    display: inline;
+    margin-right: 10px;
+    padding: 5px;
+    color: #000000;
+    font-size: 200%;
+}
+
+
+/* Login/Register  Tables */
+
+.loginandregistertable {
+    border-spacing: 5px;
+    padding: 10px;
+    color: #000000;
+    background-color: #efefef;
+    padding: inherit;
+}
+
+fieldset {
+    width: 350px;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: right;
+}
+
+legend {
+    background-color: #efefef;
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    padding: 10px 20px;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+
+/* Login/Register Inputs Button */
+
+input {
+    line-height: 0.5cm;
+}
+
+.passwordinput {
+    width: 30%;
+}
+
+
+/* Submit Button */
+
+.submitbutton {
+    color: #000000;
+    background-color: #ffffff;
+    margin: 10px auto 10px auto;
+}
+
+.submitbutton:hover {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.submitbutton:active {
+    color: #000000;
+    background-color: #1dd63c;
+}
