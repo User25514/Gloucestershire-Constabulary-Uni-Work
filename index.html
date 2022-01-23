@@ -1,91 +1,57 @@
-MARKUP FOR HTML5 FORM
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
-<link rel=stylesheet href=form1.css type=text/css>
+    <!-- Contains information about the page -->
+    <title>Login Page</title>
 </head>
-<form id=payment>
- <fieldset>
- <legend>Your details</legend>
- <ol>
- <li>
- <label for=name>Name</label>
- <input id=name name=name type=text placeholder="First and last name"
-required autofocus>
- </li>
- <li>
- <label for=email>Email</label>
- <input id=email name=email type=email
-placeholder="example@domain.com" required>
- </li>
- <li>
- <label for=phone>Phone</label>
- <input id=phone name=phone type=tel placeholder="Eg. +447500000000"
-required>
- </li>
- </ol>
- </fieldset>
-<fieldset>
- <legend>Delivery address</legend>
- <ol>
- <li>
- <label for=address>Address</label>
- <textarea id=address name=address rows=5 required></textarea>
- </li>
- <li>
- <label for=postcode>Post code</label>
- <input id=postcode name=postcode type=text required>
- </li>
- <li>
- <label for=country>Country</label>
- <input id=country name=country type=text required>
- </li>
- </ol>
- </fieldset>
- <fieldset>
- <legend>Card details</legend>
- <ol>
- <li>
- <fieldset>
- <legend>Card type</legend>
- <ol>
- <li>
- <input id=visa name=cardtype type=radio>
- <label for=visa>VISA</label>
- </li>
- <li>
- <input id=amex name=cardtype type=radio>
- <label for=amex>AmEx</label>
- </li>
- <li>
- <input id=mastercard name=cardtype type=radio>
- <label for=mastercard>Mastercard</label>
- </li>
- </ol>
- </fieldset>
- </li>
- <li>
- <label for=cardnumber>Card number</label>
- <input id=cardnumber name=cardnumber type=number required>
- </li>
- <li>
- <label for=secure>Security code</label>
- <input id=secure name=secure type=number required>
- </li>
- <li>
- <label for=namecard>Name on card</label>
- <input id=namecard name=namecard type=text placeholder="Exact name
-as on the card" required>
- </li>
- </ol>
- </fieldset>
- <fieldset>
- <button type=submit>Buy it!</button>
- </fieldset>
-</form>
+
 <body>
+    <table>
+        <!-- Login and Register Table-->
+        <tr>
+            <td>
+                <fieldset>
+                    <legend>Login</legend>
+                    <form action="About/index.html" metho="get">
+                        <p>Email:
+                            <input type="text" name="email" />
+                        </p>
+                        <p>Password:
+                            <input type="password" name="password" maxlength="30" />
+                        </p>
+                        <input type="submit" value="Login" />
+                    </form>
+                </fieldset>
+            </td>
+            <td>
+                <fieldset>
+                    <legend>Register</legend>
+                    <form action="About/index.html" metho="get">
+                        <p>First Name:
+                            <input type="text" name="firstname" />
+                        </p>
+                        <p>Last Name:
+                            <input type="text" name="lastname" />
+                        </p>
+                        <p>Phone Number:
+                            <input type="text" name="phonenumber" />
+                        </p>
+                        <p>Email:
+                            <input type="text" name="email" />
+                        </p>
+                        <p>Password:
+                            <input type="password" name="password" maxlength="30" />
+                        </p>
+                        <p>Confirm Password:
+                            <input type="password" name="confirmpassword" maxlength="30" />
+                        </p>
+                        <input type="submit" value="Register" />
+                    </form>
+                </fieldset>
+            </td>
+        </tr>
+    </table>
 </body>
+
 </html>
