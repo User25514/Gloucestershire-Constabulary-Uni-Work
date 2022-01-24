@@ -5,68 +5,85 @@
     <!-- Contains information about the page -->
     <title>Login Page</title>
     <link rel="stylesheet" href="styleSheet.css" type="text/css" rel="styleSheet">
+    <meta name=viewport content='width=700'>
+
 </head>
 
 <body>
-    <div>
+    <table class="userinterface">
 
-        <table class="navigationmenu">
-            <ul>
-                <li class="navigationtext"><a href="index.html">Home</a></li>
-                <li class="navigationtext"><a href="about.html">About</a></li>
-            </ul>
-        </table>
-    </div>
-    <div>
-        <!-- Login and Register Table-->
-        <table class="loginandregistertable">
-            <tr>
+        <tr class="navigationmenu">
+            <div>
                 <td>
-                    <fieldset class="Login">
-                        <legend>Login</legend>
-                        <form action="About/index.html" metho="get">
-                            <p>Email:
-                                <input class="emailinput" type="email" name="email" required="required" />
-                            </p>
-                            <p>Password:
-                                <input class="passwordinput" type="password" name="password" minlength="8" maxlength="15" required="required" />
-                            </p>
-                            <input class="submitbutton" type="submit" value="Login" />
-                        </form>
-                    </fieldset>
+                    <ul class="navigationtext">
+                        <li class="active"><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="About/index.html">About</a></li>
+                    </ul>
                 </td>
+            </div>
+        </tr>
+
+        <tr>
+            <div>
                 <td>
-                    <fieldset class="Register">
-                        <legend>Register</legend>
-                        <form action="About/index.html" metho="get">
-                            <p>First Name:
-                                <input class="firstnameinput" type="text" name="firstname" required="required" />
-                            </p>
-                            <p>Last Name:
-                                <input class="lastnameinput" type="text" name="lastname" required="required" />
-                            </p>
-                            <p>Date of Birth:
-                                <input class="dobinput" type="date" name="dateofbirth" required="required" />
-                            </p>
-                            <p>Phone Number:
-                                <input class="phonenumberinput" type="text" name="phonenumber" minlength="11" maxlength="11" required="required" />
-                            </p>
-                            <p>Email:
-                                <input class="emailinput" type="email" name="email" required="required" />
-                            </p>
-                            <p>Password:
-                                <input class="passwordinput" type="password" name="password" minlength="8" maxlength="15" required="required" />
-                            </p>
-                            <p>Confirm Password:
-                                <input class="passwordinput" type="password" name="confirmpassword" minlength="8" maxlength="15" required="required" />
-                            </p>
-                            <input class="submitbutton" type="submit" value="Register" />
-                        </form>
-                    </fieldset>
+                    <!-- Login and Register Table-->
+                    <table class="loginandregistertable">
+
+                        <tr>
+                            <div>
+                                <td>
+                                    <fieldset class="Login">
+                                        <legend>Login</legend>
+                                        <form action="About/index.html" metho="get">
+                                            <p>Email:
+                                                <input class="emailinput" type="email" name="email" required="required" />
+                                            </p>
+                                            <p>Password:
+                                                <input class="passwordinput" type="password" name="password" minlength="8" maxlength="15" required="required" />
+                                            </p>
+                                            <input class="submitbutton" type="submit" value="Login" />
+                                        </form>
+                                    </fieldset>
+                                </td>
+                            </div>
+                            <div>
+                                <td>
+                                    <fieldset class="Register">
+                                        <legend>Register</legend>
+                                        <form action="About/index.html" metho="get">
+                                            <p>First Name:
+                                                <input class="firstnameinput" type="text" name="firstname" required="required" />
+                                            </p>
+                                            <p>Last Name:
+                                                <input class="lastnameinput" type="text" name="lastname" required="required" />
+                                            </p>
+                                            <p>Date of Birth:
+                                                <input class="dobinput" type="date" name="dateofbirth" required="required" />
+                                            </p>
+                                            <p>Phone Number:
+                                                <input class="phonenumberinput" type="text" name="phonenumber" minlength="11" maxlength="11" required="required" />
+                                            </p>
+                                            <p>Email:
+                                                <input class="emailinput" type="email" name="email" required="required" />
+                                            </p>
+                                            <p>Password:
+                                                <input class="passwordinput" type="password" name="password" minlength="8" maxlength="15" required="required" />
+                                            </p>
+                                            <p>Confirm Password:
+                                                <input class="passwordinput" type="password" name="confirmpassword" minlength="8" maxlength="15" required="required" />
+                                            </p>
+                                            <input class="submitbutton" type="submit" value="Register" />
+                                        </form>
+                                    </fieldset>
+                                </td>
+                            </div>
+                        </tr>
+                    </table>
                 </td>
-            </tr>
-        </table>
-    </div>
+            </div>
+        </tr>
+    </table>
 </body>
 
 </html>
