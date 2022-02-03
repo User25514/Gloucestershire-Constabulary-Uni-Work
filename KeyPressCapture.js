@@ -17,11 +17,9 @@ function KeyboardCapture(Location) {
     function logKey(e) {
         if (element === document.activeElement) {
         const Key = e.key;
-        if (["Control","Tab","CapsLock","Alt","Meta","Shift","Enter"].indexOf(e.key) > -1){
-        }
-        else if (e.key === "Backspace"){
+        if (e.key === "Backspace") {
             EmailString.pop();
-            
+        } else if ((e.key).length > 1){
         } else{
             EmailString.push(e.key);
         }
