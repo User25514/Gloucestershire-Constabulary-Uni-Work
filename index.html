@@ -7,11 +7,14 @@
     <link rel="stylesheet" href="StyleSheets/loginSheet.css" type="text/css" rel="styleSheet">
     <meta name=viewport content='width=700'>
     <script src="SystemLogin.js"></script>
+    <!-- Contains the login system Validation -->
     <script src="SystemRegister.js"></script>
+    <!-- Contains the register system Validation -->
 </head>
 
 <body>
     <div class="navigationmenu">
+        <!-- Navigation-->
         <ul class="navigationtext">
             <li class="active"><a href="index.html">Home</a></li>
             <li><a href="About/index.html">About</a></li>
@@ -22,9 +25,11 @@
     <table class="loginandregistertable">
         <tr>
             <div>
+                <!--Login container-->
                 <td>
                     <fieldset class="Login">
                         <legend>Login</legend>
+                        <!--login form-->
                         <form action="About/index.html" metho="get" onsubmit="return SystemLogin();">
                             <p>Email:<br/>
                                 <input class="emailinput" ID="LoginEmail" type="email" name="email" required="required" readonly />
@@ -40,9 +45,11 @@
                 </td>
             </div>
             <div>
+                <!--Register container-->
                 <td>
                     <fieldset class="Register">
                         <legend>Register</legend>
+                        <!--Reigster Form-->
                         <form action="About/index.html" metho="get" onsubmit="return SystemRegister();">
                             <p>First Name:<br/>
                                 <input class="firstnameinput" ID="RegisterFirstName" type="text" name="firstname" required="required" readonly/>
@@ -72,7 +79,9 @@
                 </td>
             </div>
         </tr>
+
         <script src="KeyPressCapture.js"></script>
+        <!-- Contains the key press capture to capture all buttons to mitigate threats -->
     </table>
 
 </body>

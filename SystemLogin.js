@@ -1,7 +1,7 @@
 function SystemLogin() {
     var PageInfo = {
-        Email = document.getElementById("LoginEmail").value,
-        Password = document.getElementById("LoginPassword").value
+        Email: document.getElementById("LoginEmail").value,
+        Password: document.getElementById("LoginPassword").value
     };
     if (PageInfo.Email != "" && PageInfo.Email.includes("@" && ".") && PageInfo.Email.includes(".com" || ".co.uk")) {
         if (PageInfo.Password != "" && PageInfo.Password.length >= 8 && PageInfo.Password.length <= 16 && PageInfo.Password.match(/[a-z]/i) && PageInfo.Password.match(/[A-Z]/i) && PageInfo.Password.match(/[0-9]/i) && PageInfo.Password.match(/[!@#$%^&*]/i)) {
