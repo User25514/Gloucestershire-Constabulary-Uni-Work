@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="StyleSheets/loginSheet.css" type="text/css" rel="styleSheet">
     <meta name=viewport content='width=700'>
     <script src="SystemLogin.js"></script>
+    <script src="SystemRegister.js"></script>
 </head>
 
 <body>
@@ -42,7 +43,7 @@
                 <td>
                     <fieldset class="Register">
                         <legend>Register</legend>
-                        <form action="About/index.html" metho="get">
+                        <form action="About/index.html" metho="get" onsubmit="return SystemRegister();">
                             <p>First Name:<br/>
                                 <input class="firstnameinput" ID="RegisterFirstName" type="text" name="firstname" required="required" readonly/>
                             </p>
