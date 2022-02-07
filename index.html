@@ -6,7 +6,7 @@
     <title>Login Page</title>
     <link rel="stylesheet" href="StyleSheets/loginSheet.css" type="text/css" rel="styleSheet">
     <meta name=viewport content='width=700'>
-    
+    <script src="SystemLogin.js"></script>
 </head>
 
 <body>
@@ -24,7 +24,7 @@
                 <td>
                     <fieldset class="Login">
                         <legend>Login</legend>
-                        <form>
+                        <form action="About/index.html" metho="get" onsubmit="return SystemLogin();">
                             <p>Email:<br/>
                                 <input class="emailinput" ID="LoginEmail" type="email" name="email" required="required" readonly />
                             </p>
@@ -33,7 +33,7 @@
                             </p>
                             <br/>
                             <input class="submitbutton" ID="LoginSubmit" type="submit" value="Login" />
-                            <script src="SystemLogin.js"></script>
+
                         </form>
                     </fieldset>
                 </td>
