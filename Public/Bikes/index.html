@@ -6,6 +6,10 @@
     <title>Login Page</title>
     <link rel="stylesheet" href="../../StyleSheets/publicSheet.css" type="text/css" rel="styleSheet">
     <meta name=viewport content='width=700'>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -39,6 +43,17 @@
                         <br/> Duis vitae scelerisque lorem. Phasellus orci magna, pulvinar eu iaculis sit amet, laoreet sodales dui. Maecenas ultricies elit mauris. In ullamcorper porta tempus. Etiam et leo fringilla, egestas justo et, hendrerit nisi.
                         Duis vestibulum, lacus non iaculis cursus, tellus dui semper leo, hendrerit posuere urna ante ut nulla. Proin fringilla odio in imperdiet scelerisque. oufah cio cawonc oi </p>
                 </div>
+                <div class="popup">
+                    <form id="formRegisterBike">
+                        <label>Bike name:</label> <br/>
+                        <input type="text" id="txtBikeName" name="bikeName"> <br/>
+                        <label for="file">Choose bike image</label>
+                        <input type="file" id="fileBikeImage" name="file"><br/><br/>
+                        <img src="" alt="image preview..." id="bannerImg"><br/><br/>
+                        <input type="submit" id="btnRegisterBike" value="Save">
+                    </form>
+                </div>
+                <script src="./RegisterBike.js"></script>
             </td>
         </tr>
     </table>
