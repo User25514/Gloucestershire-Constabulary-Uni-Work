@@ -6,10 +6,10 @@
     <title>Login Page</title>
     <link rel="stylesheet" href="../../StyleSheets/publicSheet.css" type="text/css" rel="styleSheet">
     <meta name=viewport content='width=700'>
-    <script
-  src="https://code.jquery.com/jquery-3.6.0.js"
-  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
-  crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -47,15 +47,19 @@
                     <form id="formRegisterBike">
                         <label>Bike name:</label> <br/>
                         <input type="text" id="txtBikeName" name="bikeName"> <br/>
+                        <input type="date" id="dateEvent"> </br>
                         <label for="file">Choose bike image</label>
                         <input type="file" id="fileBikeImage" name="file"><br/><br/>
                         <img src="" alt="image preview..." id="bannerImg"><br/><br/>
+                        <div id="mapInput" style="width: 650px; height:  300px;"></div><br>
                         <input type="submit" id="btnRegisterBike" value="Save">
+                        <script src="InsertEvent.js"></script>
                     </form>
                 </div>
                 <script src="./RegisterBike.js"></script>
             </td>
         </tr>
+
     </table>
 
 </body>
