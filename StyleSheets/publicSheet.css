@@ -65,25 +65,46 @@ body {
 
 /* Login/Register  Tables */
 
-.loginandregistertable {
-    width: 100%;
+.BikeDatabase {
+    border-spacing: 10px;
     color: #000000;
-    background-color: #efefef;
+    padding: inherit;
+    background-color: #acb3ff;
+    min-width: 60%;
 }
 
-fieldset {
-    border: 1px solid #dcdcdc;
-    border-radius: 10px;
-    padding: 20px;
-    text-align: center;
+#BikeDatabaseRow {
+    border: 1px solid #000000;
 }
 
-legend {
-    background-color: #efefef;
-    border: 1px solid #dcdcdc;
-    border-radius: 10px;
-    padding: 10px 20px;
-    text-transform: uppercase;
+.BikeInfo {
+    border-spacing: 10px;
+    color: #000000;
+    padding: inherit;
+    background-color: #acb3ff;
+    min-width: 100%;
+}
+
+
+/*hidden Register */
+
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 50%;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+.form-popup {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+.form-container .cancel {
+    background-color: red;
 }
 
 
@@ -117,4 +138,11 @@ input {
 .submitbutton:active {
     color: #000000;
     background-color: #1dd63c;
+}
+
+#BikeRegisterButton {
+    color: #000000;
+    background-color: #99c9ff;
+    width: 100%;
+    height: 100%;
 }
