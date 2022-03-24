@@ -15,10 +15,28 @@ function SystemRegister() {
             /* Check Email*/
             if (PageInfo.Email.includes("@") && PageInfo.Email.includes(".") && PageInfo.Email.includes(".com") || PageInfo.Email.includes(".co.uk")) {
                 /* Check Password rules*/
-                if (PageInfo.Password.length >= 8 && PageInfo.Password.length <= 16 && PageInfo.Password.match(/[a-z]/i) && PageInfo.Password.match(/[A-Z]/i) && PageInfo.Password.match(/[0-9]/i) && PageInfo.Password.match(/[!@#$%^&*]/i)) {
+                if (PageInfo.Password.length >= 8 && PageInfo.Password.length <= 16 && PageInfo.Password.match(/[a-z]/i) && PageInfo.Password.match(/[A-Z]/i) && PageInfo.Password.match(/[0-9]/i) && PageInfo.Password.match(/[!@#$%^&*.]/i)) {
                     if (PageInfo.Password == PageInfo.ConfirmPassword) {
-                        alert("Registered.");
-                        return true;
+                        console.log("Imagine confirm Pass Done");
+                        //Event handler for registration form submit
+                        $('#formUserRegistration').submit(function(event){
+                            formData = $('#formUserRegistration').serialize();
+                            event.preventDefault();
+                            $.ajax({
+                                type:"POST",
+                                url:"userRegistrationDAO.php",
+                                data:formData+"&phpFunction=create",
+                                success:function(msg){
+                                    $("#divMessage").html(msg);
+                                    alert("Registered.");
+                                    return true;
+                                },
+                                error:function(msg){
+                                    console.log(msg)
+                                }
+                            });
+                        });
+                        
                     } else {
                         alert("Your passwords do not match.");
                         return false;
