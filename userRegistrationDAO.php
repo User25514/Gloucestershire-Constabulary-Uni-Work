@@ -15,7 +15,7 @@
         $email = $_POST['email'];
         $pass = $_POST['password'];
         include "config.php";
-        $sql = "INSERT INTO `tbl_user`"." values "."('$firstname','$lastname','$dob','$phonenumber','$email','$pass')";
+        $sql = "INSERT INTO `tbl_user`"." values "."('','$firstname','$lastname','$dob','$phonenumber','$email','$pass')";
         if(mysqli_query($connection,$sql)) {
             echo "Successfully Registered.";
         } else {
