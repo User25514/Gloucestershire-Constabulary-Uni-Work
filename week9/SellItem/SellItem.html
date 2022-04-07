@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sell Item</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+	<form method="POST" enctype="multipart/form-data" id="formSellItem">
+	<label>Item Name:</label><br>
+	<input type="text" id="txtItemName" name="itemName"><br>
+	<label>Item Description:</label><br>
+	<input type="text" id="txtItemDescription" name="itemDescription"><br>
+	<label>Price:</label><br>
+	<input type="text" id="txtItemPrice" name="itemPrice"><br>
+	<label>Choose Pictures</label><br>
+	<input type="file" multiple name="images[]" id ="fileItemImages"><br>
+	<input type="submit" value="Save Item Details">
+	</form>
+	<script src="SellItem.js"></script>
+</body>
+</html>
