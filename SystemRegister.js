@@ -11,22 +11,29 @@ function SystemRegister() {
     /*Check if First Name is longer or equal to 2 */
     if (PageInfo.FirstName.length >= 2) {
         document.getElementById("FirstNameError").innerHTML = "";
+        console.log("Test 1");
         /* Check if Last Name is longer or equal to 2 */
         if (PageInfo.LastName.length >= 2) {
             document.getElementById("LastNameError").innerHTML = "";
+            console.log("Test 2");
             /* Check if DOB is longer or equal to 10 */
             if (PageInfo.DOB.length == 10) {
                 document.getElementById("DateOfBirthError").innerHTML = "";
+                console.log("Test 3");
                 /* Check if DOB is equal to 10 */
                 if (PageInfo.PhoneNumber.length >= 10 <= 11) {
                     document.getElementById("PhoneNumberError").innerHTML = "";
+                    console.log("Test 4");
                     /* Check Email*/
                     if (PageInfo.Email.includes("@") && PageInfo.Email.includes(".") && PageInfo.Email.includes(".com") || PageInfo.Email.includes(".co.uk")) {
                         document.getElementById("EmailError").innerHTML = "";
+                        console.log("Test 5");
                         /* Check Password rules*/
                         if (PageInfo.Password.length >= 8 && PageInfo.Password.length <= 16 && PageInfo.Password.match(/[a-z]/i) && PageInfo.Password.match(/[A-Z]/i) && PageInfo.Password.match(/[0-9]/i) && PageInfo.Password.match(/[!@#$%^&*.]/i)) {
                             document.getElementById("PasswordOneError").innerHTML = "";
+                            console.log("Test 6");
                             if (PageInfo.Password == PageInfo.ConfirmPassword) {
+                                console.log("Test 7");
                                 document.getElementById("PasswordTwoError").innerHTML = "";
                                 console.log("Imagine confirm Pass Done");
                                 //Event handler for registration form submit
