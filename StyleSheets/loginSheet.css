@@ -118,3 +118,16 @@ input {
     color: #000000;
     background-color: #1dd63c;
 }
+
+
+/*Error Messages*/
+
+.Error {
+    text-align: center;
+    overflow-wrap: break-word;
+    color: #fc8686;
+    font-size: 13px;
+    width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}

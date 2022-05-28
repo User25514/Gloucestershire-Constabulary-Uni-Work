@@ -30,15 +30,19 @@
                     <fieldset class="Login">
                         <legend>Login</legend>
                         <!--login form-->
-                        <form action="About/index.html" metho="get" onsubmit="return SystemLogin();">
+                        <form action="About/index.html" metho="post" onsubmit="return SystemLogin();">
                             <p>Email:<br/>
                                 <input class="emailinput" ID="LoginEmail" type="email" name="email" required="required" placeholder="Email" readonly />
                             </p>
-                            <p>Password:<br/>
-                                <input class="passwordinput" ID="LoginPassword" type="password" name="password" minlength="8" maxlength="15" required="required" placeholder="Password" readonly/>
-                            </p>
-                            <br/>
-                            <input class="submitbutton" ID="LoginSubmit" type="submit" value="Login" />
+                            <p ID="LoginEmailError" class="Error">
+                                <p/>
+                                <p>Password:<br/>
+                                    <input class="passwordinput" ID="LoginPassword" type="password" name="password" minlength="8" maxlength="15" required="required" placeholder="Password" readonly/>
+                                </p>
+                                <p ID="LoginPasswordError" class="Error">
+                                    <p/>
+                                    <br/>
+                                    <input class="submitbutton" ID="LoginSubmit" type="submit" value="Login" />
 
                         </form>
                     </fieldset>
@@ -50,30 +54,45 @@
                     <fieldset class="Register">
                         <legend>Register</legend>
                         <!--Reigster Form-->
-                        <form action="" metho="get" onsubmit="return SystemRegister();" id="formUserRegistration">
+                        <form action="About/index.html" metho="post" onsubmit="return SystemRegister();" id="formUserRegistration">
                             <p>First Name:<br/>
                                 <input class="firstnameinput" ID="RegisterFirstName" type="text" name="firstname" required="required" placeholder="First Name" readonly/>
                             </p>
-                            <p>Last Name:<br/>
-                                <input class="lastnameinput" ID="RegisterLastName" type="text" name="lastname" required="required" placeholder="Last Name" readonly/>
-                            </p>
-                            <p>Date of Birth:<br/>
-                                <input class="dobinput" ID="RegisterDOB" type="date" name="dateofbirth" required="required" />
-                            </p>
-                            <p>Phone Number:<br/>
-                                <input class="phonenumberinput" ID="RegisterPhoneNumber" type="text" name="phonenumber" minlength="11" maxlength="11" required="required" placeholder="Phone Number" readonly/>
-                            </p>
-                            <p>Email:<br/>
-                                <input class="emailinput" ID="RegisterEmail" type="email" name="email" required="required" placeholder="Email" readonly />
-                            </p>
-                            <p>Password:<br/>
-                                <input class="passwordinput" ID="RegisterPassword" type="password" name="password" required="required" placeholder="Password" readonly/>
-                            </p>
-                            <p>Confirm Password:<br/>
-                                <input class="passwordinput" ID="RegisterConfirmPassword" type="password" name="confirmpassword" required="required" placeholder="Confirm Password" readonly/>
-                            </p>
-                            <br/>
-                            <input class="submitbutton" ID="RegisterSubmit" type="submit" value="Register" />
+                            <p ID="FirstNameError" class="Error">
+                                <p/>
+                                <p>Last Name:<br/>
+                                    <input class="lastnameinput" ID="RegisterLastName" type="text" name="lastname" required="required" placeholder="Last Name" readonly/>
+                                </p>
+                                <p ID="LastNameError" class="Error">
+                                    <p/>
+                                    <p>Date of Birth:<br/>
+                                        <input class="dobinput" ID="RegisterDOB" type="date" name="dateofbirth" required="required" />
+                                    </p>
+                                    <p ID="DateOfBirthError" class="Error">
+                                        <p/>
+                                        <p>Phone Number:<br/>
+                                            <input class="phonenumberinput" ID="RegisterPhoneNumber" type="text" name="phonenumber" minlength="10" maxlength="11" required="required" placeholder="Phone Number" readonly/>
+                                        </p>
+                                        <p ID="PhoenNumberError" class="Error">
+                                            <p/>
+                                            <p>Email:<br/>
+                                                <input class="emailinput" ID="RegisterEmail" type="email" name="email" required="required" placeholder="Email" readonly />
+                                            </p>
+                                            <p ID="EmailError" class="Error">
+                                                <p/>
+                                                <p>Password:<br/>
+                                                    <input class="passwordinput" ID="RegisterPassword" type="password" name="password" required="required" placeholder="Password" readonly/>
+                                                </p>
+                                                <p ID="PasswordOneError" class="Error">
+                                                    <p/>
+                                                    <p>Confirm Password:<br/>
+                                                        <input class="passwordinput" ID="RegisterConfirmPassword" type="password" name="confirmpassword" required="required" placeholder="Confirm Password" readonly/>
+                                                    </p>
+                                                    <p ID="PasswordTwoError" class="Error">
+                                                        <p/>
+                                                        <br/>
+                                                        <p ID="RegisterError" class="Error"></p>
+                                                        <input class="submitbutton" ID="RegisterSubmit" type="submit" value="Register" />
                         </form>
                     </fieldset>
                 </td>
