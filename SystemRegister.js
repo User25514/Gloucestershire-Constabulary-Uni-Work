@@ -19,7 +19,7 @@ function SystemRegister() {
                 document.getElementById("DateOfBirthError").innerHTML = "";
                 /* Check if DOB is equal to 10 */
                 if (PageInfo.PhoneNumber.length == 10) {
-                    document.getElementById("PhoenNumberError").innerHTML = "";
+                    document.getElementById("PhoneNumberError").innerHTML = "";
                     /* Check Email*/
                     if (PageInfo.Email.includes("@") && PageInfo.Email.includes(".") && PageInfo.Email.includes(".com") || PageInfo.Email.includes(".co.uk")) {
                         document.getElementById("EmailError").innerHTML = "";
