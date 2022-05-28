@@ -12,8 +12,8 @@
         delete();
     function create() {
         echo "Start Function";
-        $firstname = $_POST['firstName'];
-        $lastname = $_POST['lastName'];
+        $firstname = $_POST['firstname'];
+        $lastname = $_POST['lastname'];
         $dob = $_POST['dateofbirth'];
         $phonenumber = $_POST['phonenumber'];
         $email = $_POST['email'];
