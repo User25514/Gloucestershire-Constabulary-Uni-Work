@@ -18,7 +18,7 @@ function SystemRegister() {
             if (PageInfo.DOB.length == 10) {
                 document.getElementById("DateOfBirthError").innerHTML = "";
                 /* Check if DOB is equal to 10 */
-                if (PageInfo.PhoneNumber.length == 10) {
+                if (PageInfo.PhoneNumber.length >= 10 <= 11) {
                     document.getElementById("PhoneNumberError").innerHTML = "";
                     /* Check Email*/
                     if (PageInfo.Email.includes("@") && PageInfo.Email.includes(".") && PageInfo.Email.includes(".com") || PageInfo.Email.includes(".co.uk")) {
