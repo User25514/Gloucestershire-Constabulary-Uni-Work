@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Contains information about the page -->
+    <title>Login Page</title>
+    <link rel="stylesheet" href="StyleSheets/loginSheet.css" type="text/css" rel="styleSheet">
+    <meta name=viewport content='width=700'>
+    <script>
+        sessionStorage.clear();
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="navigationmenu">
+        <!-- Navigation-->
+        <ul class="navigationtext">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="About/index.html">About</a></li>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Login and Register Table-->
+    <table class="loginandregistertable">
+        <tr>
+            <div>
+                <!--Login container-->
+                <td>
+                    <!--Login Fieldset-->
+                    <fieldset class="Login">
+                        <legend>Login</legend>
+                        <!--login form-->
+                        <form method="POST" id="formUserLogin">
+                            <p>Email:<br/>
+                                <!--Email Input Required ReadOnly-->
+                                <input class="emailinput" ID="LoginEmail" type="email" name="email" required="required" placeholder="Email" readonly />
+                            </p>
+
+                            <p>Password:<br/>
+                                <!--Password Input Required ReadOnly min 8 max 15-->
+                                <input class="passwordinput" ID="LoginPassword" type="password" name="password" minlength="8" maxlength="15" required="required" placeholder="Password" readonly/>
+                            </p>
+                            <p ID="LoginError" class="Error">
+                                <p/>
+                                <br/>
+                                <!--LoginSubmit Button links to SystemLogin.js-->
+                                <input class="submitbutton" ID="LoginSubmit" type="submit" value="Login" />
+
+                        </form>
+                    </fieldset>
+                    <!-- Contains the login system Validation -->
+                    <script src="SystemLogin.js"></script>
+                </td>
+            </div>
+            <div>
+                <!--Register container-->
+                <td>
+                    <fieldset class="Register">
+                        <legend>Register</legend>
+                        <!--Reigster Form-->
+                        <form method="POST" id="formUserRegistration">
+                            <p>First Name:<br/>
+                                <input class="firstnameinput" ID="RegisterFirstName" type="text" name="firstname" required="required" placeholder="First Name" value="" readonly/>
+                            </p>
+                            <p ID="FirstNameError" class="Error">
+                                <p/>
+                                <p>Last Name:<br/>
+                                    <input class="lastnameinput" ID="RegisterLastName" type="text" name="lastname" required="required" placeholder="Last Name" value="" readonly/>
+                                </p>
+                                <p ID="LastNameError" class="Error">
+                                    <p/>
+                                    <p>Date of Birth:<br/>
+                                        <input class="dobinput" ID="RegisterDOB" type="date" name="dateofbirth" required="required" />
+                                    </p>
+                                    <p ID="DateOfBirthError" class="Error">
+                                        <p/>
+                                        <p>Phone Number:<br/>
+                                            <input class="phonenumberinput" ID="RegisterPhoneNumber" type="text" name="phonenumber" minlength="10" maxlength="11" required="required" placeholder="Phone Number" value="" readonly/>
+                                        </p>
+                                        <p ID="PhoneNumberError" class="Error">
+                                            <p/>
+                                            <p>Email:<br/>
+                                                <input class="emailinput" ID="RegisterEmail" type="email" name="email" required="required" placeholder="Email" value="hello@gmail.com" readonly />
+                                            </p>
+                                            <p ID="EmailError" class="Error">
+                                                <p/>
+                                                <p>Password:<br/>
+                                                    <input class="passwordinput" ID="RegisterPassword" type="password" name="password" required="required" placeholder="Password" value="HiThere123." readonly/>
+                                                </p>
+                                                <p ID="PasswordOneError" class="Error">
+                                                    <p/>
+                                                    <p>Confirm Password:<br/>
+                                                        <input class="passwordinput" ID="RegisterConfirmPassword" type="password" name="confirmpassword" required="required" placeholder="Confirm Password" value="HiThere123." readonly/>
+                                                    </p>
+                                                    <p ID="PasswordTwoError" class="Error">
+                                                        <p/>
+                                                        <br/>
+                                                        <p ID="RegisterError" class="Error"></p>
+                                                        <input class="submitbutton" ID="RegisterSubmit" type="submit" value="Register" />
+                        </form>
+                    </fieldset>
+                    <script src="SystemRegister.js"></script>
+                    <!-- Contains the register system Validation -->
+                </td>
+            </div>
+        </tr>
+
+        <script src="KeyPressCapture.js"></script>
+        <!-- Contains the key press capture to capture all buttons to mitigate threats -->
+    </table>
+
+</body>
+
+</html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Contains information about the page -->
+    <title>Register Bike</title>
+    <link rel="stylesheet" href="../../StyleSheets/publicSheet.css" type="text/css" rel="styleSheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+</head>
+
+<body>
+    <div class="navigationmenu">
+        <ul class="navigationtext">
+            <li><a href="../index.html">Home</a></li>
+            <li class="active"><a href="index.html">Bikes</a></li>
+            <li><a href="../Status/index.html">Status</a></li>
+            <li><a href="../../index.html">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Login and Register Table-->
+    <h1>Bike Database</h1>
+    <br/>
+    <table class="BikeDatabase">
+        <tr>
+            <td id="BikeDatabaseRow">
+                <button id="BikeRegisterButton" onclick="openForm()">Register Bike</button>
+                <script>
+                    function openForm() {
+                        document.getElementById("RegisterBike").style.display = "block";
+                    }
+
+                    function closeForm() {
+                        document.getElementById("RegisterBike").style.display = "none";
+                    }
+
+                    function STopenForm(Bike_ID) {
+                        document.getElementById("StolenBike").style.display = "block";
+                        localStorage.setItem(`Bike`, Bike_ID.split(".")[1])
+
+                    }
+
+                    function STcloseForm() {
+                        document.getElementById("StolenBike").style.display = "none";
+                    }
+                </script>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table class="BikeInfo" id="BikeTable">
+                </table>
+            </td>
+        </tr>
+    </table>
+    <div class="form-popup" id="RegisterBike">
+        <table class="texttable">
+            <tr>
+                <td>
+                    <div class="abouttext">
+                        <h2>Register a Bike</h2>
+                    </div>
+                    <div class="popup" id="formRegisterBikePopUp">
+                        <form method="POST" id="formRegisterBike" class="form-container">
+                            <table id="PopupTable">
+                                <tr>
+                                    <td>
+                                        <p>Manugacturer Part Number:
+                                            <input type="text" id="txtMPN" name="MPN" placeholder="Manugacturer Part Number" value="65346">
+                                        </p>
+                                        <p ID="txtMPNError" class="Error">
+                                            <p/>
+                                            <p>Brand:
+                                                <input type="text" id="txtBrand" name="Brand" placeholder="Brand" value="Suzuki" required="required">
+                                            </p>
+                                            <p ID="txtBrandError" class="Error">
+                                                <p/>
+                                                <p>Model:
+                                                    <input type="text" id="txtModel" name="Model" placeholder="Model" value="Urban">
+                                                </p>
+                                                <p ID="txtModelError" class="Error">
+                                                    <p/>
+                                                    <p>Type:
+                                                        <input type="text" id="txtType" name="Type" placeholder="Type of Bike" value="Mountain" required="required">
+                                                    </p>
+                                                    <p ID="txtTypeError" class="Error">
+                                                        <p/>
+                                                        <p>Wheel Size (Inch):
+                                                            <input type="number" id="txtWheelSize" name="WheelSize" placeholder="Wheel Size" value="6">
+                                                        </p>
+                                                        <p ID="ErrortxtWheelSize" class="Error">
+                                                            <p/>
+                                                            <p>Colour:
+                                                                <input type="text" id="txtColour" name="Colour" placeholder="Colour" value="Red" required="required">
+                                                            </p>
+                                                            <p ID="txtColourError" class="Error">
+                                                                <p/>
+                                                                <p>Number of Gears:
+                                                                    <input type="number" id="txtNoG" name="NumberofGears" placeholder="Number of Gears" value="16">
+                                                                </p>
+                                                                <p ID="txtNoGError" class="Error">
+                                                                    <p/>
+                                                                    <p>Brake Type:
+                                                                        <input type="text" id="txtBrakeType" name="brakeType" placeholder="Brake Type" value="Sports">
+                                                                    </p>
+                                                                    <p ID="txtBrakeTypeError" class="Error">
+                                                                        <p/>
+                                                                        <p>Suspension:
+                                                                            <input type="text" id="txtSuspension" name="Suspension" placeholder="Suspension" value="Valve">
+                                                                        </p>
+                                                                        <p ID="txtSuspensionError" class="Error">
+                                                                            <p/>
+                                                                            <p>Gender:
+                                                                                <input type="text" id="txtGender" name="Gender" placeholder="Gender" value="Unisex" required="required">
+                                                                            </p>
+                                                                            <p ID="txtGenderError" class="Error">
+                                                                                <p/>
+                                                                                <p>Age Group:
+                                                                                    <input type="text" id="txtAgeGroup" name="AgeGroup" placeholder="Age Group" value="Adult" required="required"></br><br/>
+
+
+                                                                                </p>
+                                                                                <p ID="txtAgeGroupError" class="Error">
+                                                                                    <p/>
+                                                                                    <p>When Was it stolen:
+                                                                                        <input type="date" id="dateEvent" name="Date">
+                                                                                    </p>
+                                                                                    <p ID="dateEventError" class="Error">
+                                                                                        <p/>
+                                    </td>
+                                    <td>
+                                        <p for="file">Bike image:</p>
+                                        <input type="file" src="" id="fileBikeImage" name="file"><br/><br/>
+                                        <img src="Error.png" alt="image preview..." id="bannerImg" style="width: 200px; height: 200px;"><br/><br/>
+                                        <p ID="txtAgeGroupError" class="Error">
+                                            <p/>
+                                            <p>Where was the bike last seen:</p>
+                                            <div id="mapInput" style="width: 550px; height:  300px;"></div><br>
+                                            <input type="submit" id="btnRegisterBike" value="Register">
+                                            <button type="button" class="btnRegisterClose" onclick="closeForm()">Close</button>
+                                            <script src="InsertEvent.js" id="GoogleMap"></script>
+                                    </td>
+
+                            </table>
+                        </form>
+
+                    </div>
+
+                    <script src="./RegisterBike.js"></script>
+                </td>
+                </tr>
+
+        </table>
+    </div>
+    <div class="form-popup" id="StolenBike">
+        <table class="texttable">
+            <tr>
+                <td>
+                    <h2>When and where was it last seen: </h2>
+                    <div class="popup" id="formStolenBikePopUp" value="">
+                        <form id="formStolenBike" class="form-container">
+                            <table id="PopupTable">
+                                <tr>
+                                    <td>
+                                        <p>When Was it stolen:
+                                            <input type="date" id="StolenDateEvent" name="Date" min="" max="">
+                                        </p>
+                                        <p ID="StolenDateEventError" class="Error">
+                                            <p/>
+                                            <p>Where was the bike last seen:</p>
+                                            <div id="StolenmapInput" style="width: 550px; height:  300px;"></div><br>
+                                            <input type="button" id="btnStolenBike" value="RegisterStolen" onclick="ReportStolen()">
+                                            <button type="button" class="btnStolenClose" onclick="STcloseForm()">Close</button>
+
+                                    </td>
+                            </table>
+                        </form>
+                    </div>
+                </td>
+                </tr>
+        </table>
+    </div>
+</body>
+<script src="InsertEvent.js" id="GoogleMap"></script>
+<script src="BikeCheck.js"></script>
+
+</html>
